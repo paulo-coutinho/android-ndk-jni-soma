@@ -41,6 +41,13 @@
         android:id="@+id/buttonSum"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="@string/button_sum" />
+        android:text="@string/button_sum"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/button_send" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

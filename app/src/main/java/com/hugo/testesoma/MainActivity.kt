@@ -1,12 +1,16 @@
 package com.hugo.testesoma
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.hugo.testesoma.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private var resultOfSum: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,8 +23,22 @@ class MainActivity : AppCompatActivity() {
         //binding.sampleText.text = somaFromJNI(1, 5).toString()
 
         binding.buttonSum.setOnClickListener {
-            val result = "Resultado: " + somaFromJNI(binding.numA.text.toString().toInt(), binding.numB.text.toString().toInt()).toString()
-            binding.sampleText.text = result
+            resultOfSum = somaFromJNI(
+                binding.numA.text.toString().toInt(),
+                binding.numB.text.toString().toInt()
+            )
+            binding.sampleText.text = "Resultado: " + resultOfSum
+        }
+
+        binding.buttonSend.setOnClickListener {
+            val i = Intent(this, ShowActivity::class.java)
+
+            val bundle = Bundle()
+            bundle.putInt("sum", resultOfSum)
+
+            i.putExtras(bundle)
+
+            startActivity(i)
         }
     }
 
