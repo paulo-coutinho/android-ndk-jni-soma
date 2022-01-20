@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="@string/title" />
+
+
+    <EditText
+        android:id="@+id/numA"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/num_a_value" />
+
+    <EditText
+        android:id="@+id/numB"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/num_b_value" />
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="Hello World!" />
+
+    <Button
+        android:id="@+id/buttonSum"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/button_sum" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
