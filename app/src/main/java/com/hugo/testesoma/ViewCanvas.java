@@ -31,9 +31,11 @@ public class ViewCanvas extends View {
 
     @Override
     public void onDraw(Canvas canvas) {
+        // canvas
+        canvas.drawColor(WHITE);
+
         // como desenhar o circulo (características)
         paint.setStyle(Paint.Style.FILL);
-        canvas.drawColor(WHITE);
         paint.setColor(BLACK);
 
         // agora desenha o círculo
@@ -51,9 +53,11 @@ public class ViewCanvas extends View {
         float y = event.getY();
 
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            // muda as posições
             touchX = x;
             touchY = y;
         } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+            // muda as posições
             touchX = x;
             touchY = y;
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
