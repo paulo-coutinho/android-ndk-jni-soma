@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         // Example of a call to a native method
@@ -23,22 +24,31 @@ class MainActivity : AppCompatActivity() {
         //binding.sampleText.text = somaFromJNI(1, 5).toString()
 
         binding.buttonSum.setOnClickListener {
+            /*
             resultOfSum = somaFromJNI(
                 binding.numA.text.toString().toInt(),
                 binding.numB.text.toString().toInt()
             )
+            */
+
+            resultOfSum = Calculadora.soma(
+                binding.numA.text.toString().toInt(),
+            )
+
             binding.sampleText.text = "Resultado: " + resultOfSum
         }
 
         binding.buttonSend.setOnClickListener {
-            val i = Intent(this, ShowActivity::class.java)
+            val intent = Intent(this, ShowActivity::class.java)
 
             val bundle = Bundle()
             bundle.putInt("sum", resultOfSum)
+            bundle.putInt("novo_inteiro", 123)
+            bundle.putString("nome", "Hugo")
 
-            i.putExtras(bundle)
+            intent.putExtras(bundle)
 
-            startActivity(i)
+            startActivity(intent)
         }
     }
 

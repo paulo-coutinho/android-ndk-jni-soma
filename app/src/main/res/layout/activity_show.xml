@@ -5,13 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".ShowActivity">
 
-    <TextView
-        android:id="@+id/resultOfSum"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerInParent="true"
-        android:background="#F00"
-        android:gravity="center"
-        android:textColor="#FFF" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/resultOfSum"-->
+    <!--        android:layout_width="50dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:background="#FF0000"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="12345"-->
+    <!--        android:textColor="#FFFFFF" />-->
+
+    <com.hugo.testesoma.ViewCanvas
+        android:id="@+id/viewCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
